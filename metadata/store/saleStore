@@ -1,0 +1,49 @@
+{
+    "type": "jsonstore",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "saleStore",
+        "model": "saleModel",
+        "storeId": "saleStore"
+    },
+    "name": "MyJsonStore",
+    "designerId": "73246fe1-175d-4287-b742-b68157db48ac",
+    "cn": [
+        {
+            "type": "Ext.data.proxy.Ajax",
+            "reference": {
+                "name": "proxy",
+                "type": "object"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "api": [
+                    "{",
+                    "    read : 'api/music/sale/readSale.php'",
+                    "}"
+                ]
+            },
+            "name": "MyAjaxProxy3",
+            "designerId": "27958752-3954-4710-a3fd-2fb1b7116fe9",
+            "cn": [
+                {
+                    "type": "Ext.data.reader.Json",
+                    "reference": {
+                        "name": "reader",
+                        "type": "object"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "root": "data"
+                    },
+                    "name": "MyJsonReader3",
+                    "designerId": "c09f60c3-d9f0-4fad-a45d-53e823fffe57"
+                }
+            ]
+        }
+    ]
+}

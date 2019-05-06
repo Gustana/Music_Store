@@ -1,0 +1,106 @@
+{
+    "type": "Ext.app.Controller",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "saleController"
+    },
+    "name": "MyController",
+    "designerId": "31a0581a-a89e-4ee3-85f7-80f1dd226108",
+    "cn": [
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|controlQuery": "#salePanel",
+                "designer|targetType": "Ext.panel.Panel",
+                "fn": "onPanelShow",
+                "implHandler": [
+                    "Ext.getStore('saleStore').load();"
+                ],
+                "name": "show",
+                "scope": "me"
+            },
+            "name": "onPanelShow",
+            "designerId": "fdb3a40d-2c96-4521-9c5f-2ea14cdb2d0d"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|controlQuery": "#salePanel",
+                "designer|targetType": "Ext.panel.Panel",
+                "fn": "onPanelBoxReady",
+                "implHandler": [
+                    "Ext.getStore('saleStore').load();"
+                ],
+                "name": "boxready",
+                "scope": "me"
+            },
+            "name": "onPanelBoxReady",
+            "designerId": "6be838f7-c18d-4eaf-833e-97a4d5ccf770"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|controlQuery": "#edtSaleFilter",
+                "designer|targetType": "Ext.form.field.Text",
+                "fn": "onFilterChange",
+                "implHandler": [
+                    "",
+                    "if(e.keyCode == e.ENTER){",
+                    "    var filterString = Ext.ComponentQuery.query('#edtSaleFilter')[0].getValue();",
+                    "    console.log(filterString);",
+                    "    Ext.getStore('saleStore').load({",
+                    "        params:{",
+                    "            filter : filterString",
+                    "        }",
+                    "    });",
+                    "",
+                    "    Ext.ComponentQuery.query('#tableSale')[0].getSelectionModel().clearSelections();",
+                    "}"
+                ],
+                "name": "specialkey",
+                "scope": "me"
+            },
+            "name": "onFilterChange",
+            "designerId": "6f0329dd-a3d5-4488-97d5-fac44b26656c"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|controlQuery": "#btnCancelRating",
+                "designer|targetType": "Ext.button.Button",
+                "fn": "onCancelRatingClick",
+                "implHandler": [
+                    "button.up('window').close();"
+                ],
+                "name": "click",
+                "scope": "me"
+            },
+            "name": "onCancelRatingClick",
+            "designerId": "469a16c2-3514-409f-b62c-ba3a9b6230cf"
+        }
+    ]
+}

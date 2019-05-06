@@ -1,0 +1,61 @@
+{
+    "name": "Music_Store",
+    "settings": {
+        "cmd": {
+            "license": "commercial"
+        },
+        "canvasControls": {
+            "viewportSize": {
+                "name": "Auto Expand",
+                "builtIn": true,
+                "height": null,
+                "width": null
+            }
+        },
+        "urlPrefix": "",
+        "exportPath": ""
+    },
+    "xdsVersion": "3.1.0",
+    "xdsBuild": 1943,
+    "schemaVersion": 1,
+    "upgradeVersion": 300000000007,
+    "framework": "ext42",
+    "viewOrderMap": {
+        "view": [
+            "353f0c49-9162-4dc5-8e2d-ffb09f0d3a62",
+            "f8c9dbf5-714c-4eb8-9ba8-8d6d88af86af",
+            "7f3aeb05-e968-4f16-9ec5-7d07b6dcff40",
+            "74ff2391-edb7-4ade-b2f1-d5dc2fa36724"
+        ],
+        "store": [
+            "09e7b84e-cb9d-4ad4-ba9b-d1304dc53354",
+            "1980669a-86f1-4540-bbf9-4e9cd8926fdc",
+            "0d9abb42-004b-4bd9-abe5-2dd6781e9ab6",
+            "0a059f2e-9cbb-4105-8f60-9227344b3a0d",
+            "73246fe1-175d-4287-b742-b68157db48ac",
+            "b5e817fc-7407-44a8-8786-da97c2825b87",
+            "b97f5793-4b7c-42f0-bca9-f878ffbc4b25"
+        ],
+        "controller": [
+            "02e19093-9c6b-4222-8b96-2632f82d7303",
+            "24da7955-2326-439c-852c-e55acedf965f",
+            "5f38c6ff-a26d-4691-8a6b-f741d6101d68",
+            "a8c001a8-1761-45fd-bd41-a2c68a4a8496",
+            "31a0581a-a89e-4ee3-85f7-80f1dd226108",
+            "f413163c-9969-401a-ae8b-6a01743d39b2"
+        ],
+        "model": [
+            "f2cef7be-33c3-4e90-9a82-81312e14b851",
+            "907761f0-5696-49a1-afa5-5f30013302da",
+            "c65ba06c-a2b1-465c-8791-9f9748a5ad99"
+        ],
+        "resource": [
+            "efa3151d-f411-416b-a78d-276e3b22783a",
+            "f8da9d70-74df-423c-8b96-cfafbc73c664",
+            "0c8c5bda-8905-416a-a2f8-82cd428f48da"
+        ],
+        "app": [
+            "application"
+        ]
+    }
+}

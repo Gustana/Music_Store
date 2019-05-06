@@ -1,0 +1,49 @@
+{
+    "type": "jsonstore",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "ratingStore",
+        "model": "ratingModel",
+        "storeId": "ratingStore"
+    },
+    "name": "MyJsonStore",
+    "designerId": "b97f5793-4b7c-42f0-bca9-f878ffbc4b25",
+    "cn": [
+        {
+            "type": "Ext.data.proxy.Ajax",
+            "reference": {
+                "name": "proxy",
+                "type": "object"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "api": [
+                    "{",
+                    "    read : 'api/music/rating/readRating.php'",
+                    "}"
+                ]
+            },
+            "name": "MyAjaxProxy5",
+            "designerId": "452c7b6b-9939-4d91-a6f4-4b045c8f2b30",
+            "cn": [
+                {
+                    "type": "Ext.data.reader.Json",
+                    "reference": {
+                        "name": "reader",
+                        "type": "object"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "root": "data"
+                    },
+                    "name": "MyJsonReader5",
+                    "designerId": "2806333a-c5b9-4133-b8e4-6d5c4fe55c48"
+                }
+            ]
+        }
+    ]
+}

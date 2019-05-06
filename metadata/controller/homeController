@@ -1,0 +1,273 @@
+{
+    "type": "Ext.app.Controller",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "homeController"
+    },
+    "name": "MyController",
+    "designerId": "24da7955-2326-439c-852c-e55acedf965f",
+    "cn": [
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|controlQuery": "#homePanel",
+                "designer|targetType": "Ext.panel.Panel",
+                "fn": "onPanelShow",
+                "implHandler": [
+                    "Ext.getStore('musicStore').load();"
+                ],
+                "name": "show",
+                "scope": "me"
+            },
+            "name": "onPanelShow",
+            "designerId": "8c1f8674-5bb2-4091-a674-203a056215ab"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|controlQuery": "#homePanel",
+                "designer|targetType": "Ext.panel.Panel",
+                "fn": "onPanelBoxReady",
+                "implHandler": [
+                    "Ext.getStore('musicStore').load();"
+                ],
+                "name": "boxready",
+                "scope": "me"
+            },
+            "name": "onPanelBoxReady",
+            "designerId": "ac406896-7451-43e6-a104-4448dd0943cb"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|controlQuery": "#btnAddMusic",
+                "designer|targetType": "Ext.button.Button",
+                "fn": "onAddMusicClick",
+                "implHandler": [
+                    "Ext.widget('window_music').show();"
+                ],
+                "name": "click",
+                "scope": "me"
+            },
+            "name": "onAddMusicClick",
+            "designerId": "6af6bff2-353a-45cc-86a8-d2f0541a014f"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|controlQuery": "#btnCancel",
+                "designer|targetType": "Ext.button.Button",
+                "fn": "onCancelClick",
+                "implHandler": [
+                    "button.up('window').close();"
+                ],
+                "name": "click",
+                "scope": "me"
+            },
+            "name": "onCancelClick",
+            "designerId": "d63ec300-c0da-4264-a463-7660c44541e5"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|controlQuery": "#btnSave",
+                "designer|targetType": "Ext.button.Button",
+                "fn": "onSaveMusicClick",
+                "implHandler": [
+                    "var win = button.up('window');",
+                    "var form = win.down('form');",
+                    "",
+                    "if(form.isValid()){",
+                    "    form.submit({",
+                    "        url:'api/music/music/addMusic.php',",
+                    "        success:function(a, response){",
+                    "            console.log(response);",
+                    "            win.close();",
+                    "",
+                    "            Ext.getStore('musicStore').load();",
+                    "        },",
+                    "        failure:function(a, response){",
+                    "            console.log(\"gagal\");",
+                    "            console.log(response);",
+                    "",
+                    "            Ext.MessageBox.show({",
+                    "                title:\"Perhatian\" ,",
+                    "                msg:response.result.message,",
+                    "                icon:Ext.MessageBox.INFO",
+                    "            });",
+                    "        }",
+                    "    });",
+                    "}"
+                ],
+                "name": "click",
+                "scope": "me"
+            },
+            "name": "onSaveMusicClick",
+            "designerId": "12267f6f-0ea1-4e56-a53b-dbe4aa8567ed"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|controlQuery": "#tableMusic",
+                "designer|targetType": "Ext.grid.Panel",
+                "fn": "onGridpanelSelectionChange",
+                "implHandler": [
+                    "Ext.ComponentQuery.query('#btnEditMusic')[0].setDisabled(false);",
+                    "Ext.ComponentQuery.query('#btnDeleteMusic')[0].setDisabled(false);"
+                ],
+                "name": "selectionchange",
+                "scope": "me"
+            },
+            "name": "onGridpanelSelectionChange",
+            "designerId": "dca0ce9f-aea3-42f1-92ca-c7d995da45fa"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|controlQuery": "#btnEditMusic",
+                "designer|targetType": "Ext.button.Button",
+                "fn": "onEditMusicClick",
+                "implHandler": [
+                    "var win = Ext.widget('window_music');",
+                    "var grid = Ext.ComponentQuery.query('#tableMusic')[0];",
+                    "var selection = grid.getSelectionModel().getSelection()[0];",
+                    "",
+                    "win.down('form').loadRecord(selection);",
+                    "win.show();"
+                ],
+                "name": "click",
+                "scope": "me"
+            },
+            "name": "onEditMusicClick",
+            "designerId": "c343e0c9-ea07-48f5-87fd-0d0fd7428ecb"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|controlQuery": "#edtMusicFilter",
+                "designer|targetType": "Ext.form.field.Text",
+                "fn": "onFilterMusic",
+                "implHandler": [
+                    "if(e.keyCode == e.ENTER){",
+                    "    var filterString  = Ext.ComponentQuery.query('#edtMusicFilter')[0].getValue();",
+                    "    Ext.getStore('musicStore').load({",
+                    "        params:{",
+                    "            filter : filterString",
+                    "        }",
+                    "    });",
+                    "",
+                    "    Ext.ComponentQuery.query('#tableMusic')[0].getSelectionModel().clearSelections();",
+                    "    Ext.ComponentQuery.query('#btnEditMusic')[0].setDisabled(false);",
+                    "    Ext.ComponentQuery.query('#btnDeleteMusic')[0].setDisabled(false);",
+                    "}"
+                ],
+                "name": "specialkey",
+                "scope": "me"
+            },
+            "name": "onFilterMusic",
+            "designerId": "e462d4e0-be4d-4f7a-89e7-5e0f57e8f8f6"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|controlQuery": "#btnDeleteMusic",
+                "designer|targetType": "Ext.button.Button",
+                "fn": "onDeleteMusicClick",
+                "implHandler": [
+                    "var hapus = function(btn){",
+                    "    if(btn == 'yes'){",
+                    "        var grid = Ext.ComponentQuery.query('#tableMusic')[0];",
+                    "        var selection = grid.getSelectionModel().getSelection()[0];",
+                    "        console.log(grid);",
+                    "        console.log(selection);",
+                    "        var idMusic = selection.get('id_music');",
+                    "",
+                    "        if(selection){",
+                    "            Ext.Ajax.request({",
+                    "                url : 'api/music/music/deleteMusic.php',",
+                    "                params:{",
+                    "                    id_music : idMusic",
+                    "                },",
+                    "                success:function(response, opts){",
+                    "                    console.log(response);",
+                    "                    var response = Ext.decode(response.responseText);",
+                    "                    if(response.success){",
+                    "                        Ext.getStore('musicStore').load();",
+                    "                    }else{",
+                    "                        Ext.MessageBox.show({",
+                    "                            title: 'Peringatan' ,",
+                    "                            msg: response.message,",
+                    "                            buttons: Ext.MessageBox.OK,",
+                    "                            icon: Ext.MessageBox.INFO",
+                    "                        });",
+                    "                    }",
+                    "                }",
+                    "            });",
+                    "        }",
+                    "    }",
+                    "};",
+                    "Ext.MessageBox.show({",
+                    "    title:'Peringatan hapus' ,",
+                    "    msg: 'Apakah anda yakin ingin menghapus musik ini ?',",
+                    "    buttons:Ext.MessageBox.YESNO,",
+                    "    icon:Ext.MessageBox.QUESTION,",
+                    "    fn:hapus",
+                    "});"
+                ],
+                "name": "click",
+                "scope": "me"
+            },
+            "name": "onDeleteMusicClick",
+            "designerId": "6f14c2cb-d3ad-49ee-a899-d04725adaa80"
+        }
+    ]
+}

@@ -1,0 +1,302 @@
+{
+    "type": "Ext.app.Controller",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "storeController"
+    },
+    "name": "MyController",
+    "designerId": "a8c001a8-1761-45fd-bd41-a2c68a4a8496",
+    "cn": [
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|controlQuery": "#storePanel",
+                "designer|targetType": "Ext.panel.Panel",
+                "fn": "onPanelShow",
+                "implHandler": [
+                    "Ext.getStore('musicStore').load();"
+                ],
+                "name": "show",
+                "scope": "me"
+            },
+            "name": "onPanelShow",
+            "designerId": "b64c5085-638b-43f8-8e81-576bc357763c"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|controlQuery": "#storePanel",
+                "designer|targetType": "Ext.panel.Panel",
+                "fn": "onPanelBoxReady",
+                "implHandler": [
+                    "Ext.getStore('musicStore').load();"
+                ],
+                "name": "boxready",
+                "scope": "me"
+            },
+            "name": "onPanelBoxReady",
+            "designerId": "73bc6902-800e-4acd-8834-beeb6137928b"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|controlQuery": "#tableStore",
+                "designer|targetType": "Ext.grid.Panel",
+                "fn": "onGridpanelSelectionChange",
+                "implHandler": [
+                    "Ext.ComponentQuery.query('#btnBuyMusic')[0].setDisabled();",
+                    "Ext.ComponentQuery.query('#btnAddRating')[0].setDisabled();"
+                ],
+                "name": "selectionchange",
+                "scope": "me"
+            },
+            "name": "onGridpanelSelectionChange",
+            "designerId": "e0ded2e6-ce64-40e0-ac07-fa4a39adb50e"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|controlQuery": "#btnBuyMusic",
+                "designer|targetType": "Ext.button.Button",
+                "fn": "onBuyMusicClick",
+                "implHandler": [
+                    "var win = Ext.widget('window_purchase');",
+                    "var grid = Ext.ComponentQuery.query('#tableStore')[0];",
+                    "var selection = grid.getSelectionModel().getSelection()[0];",
+                    "",
+                    "console.log(selection);",
+                    "",
+                    "win.down('form').loadRecord(selection);",
+                    "win.show();"
+                ],
+                "name": "click",
+                "scope": "me"
+            },
+            "name": "onBuyMusicClick",
+            "designerId": "b2d45e2c-2324-4df8-8e71-96379d571297"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|controlQuery": "#btnCancelPurchase",
+                "designer|targetType": "Ext.button.Button",
+                "fn": "onCancelBuyClick",
+                "implHandler": [
+                    "button.up('window').close();"
+                ],
+                "name": "click",
+                "scope": "me"
+            },
+            "name": "onCancelBuyClick",
+            "designerId": "4d491b7c-8058-4c19-98a5-12c3763d0e53"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|controlQuery": "#btnPurchase",
+                "designer|targetType": "Ext.button.Button",
+                "fn": "onPurchaseClick",
+                "implHandler": [
+                    "var win = button.up('window');",
+                    "var form = win.down('form');",
+                    "",
+                    "var totalHarga = Ext.ComponentQuery.query('#totalPrice')[0].getValue();",
+                    "var totalBayar = Ext.ComponentQuery.query('#totalPurchase')[0].getValue();",
+                    "",
+                    "if(totalBayar >= totalHarga){",
+                    "    if(form.isValid()){",
+                    "        var kembalian = totalBayar - totalHarga;",
+                    "        form.submit({",
+                    "            url : 'api/music/music/purchaseMusic.php',",
+                    "            success: function(a, response){",
+                    "                win.close();",
+                    "",
+                    "                Ext.getStore('musicStore').load();",
+                    "",
+                    "                Ext.MessageBox.show({",
+                    "                    title:\"Kembalian\" ,",
+                    "                    msg: kembalian,",
+                    "                    icon: Ext.MessageBox.INFO",
+                    "                });",
+                    "            },",
+                    "            failure:function(a, response){",
+                    "                Ext.MessageBox.show({",
+                    "                    title:\"Perhatian\" ,",
+                    "                    msg: response.result.message,",
+                    "                    icon: Ext.MessageBox.INFO",
+                    "                });",
+                    "            }",
+                    "        });",
+                    "    }",
+                    "}else{",
+                    "    Ext.ComponentQuery.query('#negative_balance')[0].setVisible(true);",
+                    "}"
+                ],
+                "name": "click",
+                "scope": "me"
+            },
+            "name": "onPurchaseClick",
+            "designerId": "6ceefa7a-73b5-4b2d-8547-22d8cc1be169"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|controlQuery": "#amountPurchase",
+                "designer|targetType": "Ext.form.field.Number",
+                "fn": "onAmountPurchaseChange",
+                "implHandler": [
+                    "var win = field.up('window');",
+                    "var form = win.down('form');",
+                    "",
+                    "var harga = Ext.ComponentQuery.query('#music_price')[0].getValue();",
+                    "var total = harga * newValue;",
+                    "Ext.ComponentQuery.query('#totalPrice')[0].setValue(total);",
+                    "Ext.ComponentQuery.query('#totalPriceShow')[0].setValue(total);"
+                ],
+                "name": "change",
+                "scope": "me"
+            },
+            "name": "onAmountPurchaseChange",
+            "designerId": "4ecbdc6c-bf92-494c-b999-0b3f03b25bb9"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|controlQuery": "#edtStoreFilter",
+                "designer|targetType": "Ext.form.field.Text",
+                "fn": "onStoreFilter",
+                "implHandler": [
+                    "if(e.keyCode == e.ENTER){",
+                    "    var filterString = Ext.ComponentQuery.query('#edtStoreFilter')[0].getValue();",
+                    "    console.log(filterString);",
+                    "    Ext.getStore('musicStore').load({",
+                    "        params:{",
+                    "            filter : filterString",
+                    "        }",
+                    "    });",
+                    "",
+                    "    Ext.ComponentQuery.query('#tableStore')[0].getSelectionModel().clearSelections();",
+                    "}"
+                ],
+                "name": "specialkey",
+                "scope": "me"
+            },
+            "name": "onStoreFilter",
+            "designerId": "6cc38d76-2145-42a4-8c9e-cf104fb329b9"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|controlQuery": "#btnAddRating",
+                "designer|targetType": "Ext.button.Button",
+                "fn": "onAddRatingClick",
+                "implHandler": [
+                    "var win = Ext.widget('window_rating');",
+                    "var grid = Ext.ComponentQuery.query('#tableStore')[0];",
+                    "",
+                    "console.log(grid);",
+                    "",
+                    "var selection = grid.getSelectionModel().getSelection()[0];",
+                    "",
+                    "win.down('form').loadRecord(selection);",
+                    "win.show();"
+                ],
+                "name": "click",
+                "scope": "me"
+            },
+            "name": "onAddRatingClick",
+            "designerId": "fd4df11e-b662-42c9-9985-e5d78348a792"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|controlQuery": "#btnSaveRating",
+                "designer|targetType": "Ext.button.Button",
+                "fn": "onSaveRatingClick",
+                "implHandler": [
+                    "var win = button.up('window');",
+                    "var form = win.down('form');",
+                    "",
+                    "if(form.isValid()){",
+                    "    form.submit({",
+                    "        url: 'api/music/rating/addRating.php',",
+                    "        success: function(a, response){",
+                    "            win.close();",
+                    "            Ext.MessageBox.show({",
+                    "                title: \"Perhatian\",",
+                    "                msg : \"Data berhasil masuk\",",
+                    "                icon : Ext.MessageBox.INFO",
+                    "            });",
+                    "        },",
+                    "        failure: function(a, response){",
+                    "            Ext.MessageBox.show({",
+                    "                title: \"Perhatian\",",
+                    "                msg : response.result.message,",
+                    "                icon : Ext.MessageBox.INFO",
+                    "            });",
+                    "        }",
+                    "    });",
+                    "}"
+                ],
+                "name": "click",
+                "scope": "me"
+            },
+            "name": "onSaveRatingClick",
+            "designerId": "0eab20df-e593-490d-b30e-7c0bb10f62a7"
+        }
+    ]
+}

@@ -1,0 +1,41 @@
+{
+    "type": "Ext.app.Application",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "controllers": [
+            "Navigation",
+            "homeController",
+            "chartController",
+            "storeController",
+            "saleController",
+            "ratingController"
+        ],
+        "models": [
+            "musicModel",
+            "saleModel",
+            "ratingModel"
+        ],
+        "name": "MStore",
+        "stores": [
+            "musicStore",
+            "genreStore",
+            "musicChartStore",
+            "musicChartSale",
+            "saleStore",
+            "musicChartAge",
+            "ratingStore"
+        ],
+        "views": [
+            "MainView",
+            "window_music",
+            "window_purchase",
+            "window_rating"
+        ]
+    },
+    "name": "Application",
+    "designerId": "application"
+}

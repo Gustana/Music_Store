@@ -1,0 +1,59 @@
+{
+    "type": "Ext.app.Controller",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "chartController"
+    },
+    "name": "MyController",
+    "designerId": "5f38c6ff-a26d-4691-8a6b-f741d6101d68",
+    "cn": [
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|controlQuery": "#chartPanel",
+                "designer|targetType": "Ext.panel.Panel",
+                "fn": "onPanelBoxReady",
+                "implHandler": [
+                    "Ext.getStore('musicChartStore').load();",
+                    "Ext.getStore('musicChartSale').load();",
+                    "Ext.getStore('musicChartAge').load();"
+                ],
+                "name": "boxready",
+                "scope": "me"
+            },
+            "name": "onPanelBoxReady",
+            "designerId": "b4802937-cd32-4cbe-9765-3fe9169480ca"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|controlQuery": "#chartPanel",
+                "designer|targetType": "Ext.panel.Panel",
+                "fn": "onChartShow",
+                "implHandler": [
+                    "Ext.getStore('musicChartStore').load();",
+                    "Ext.getStore('musicChartSale').load();",
+                    "Ext.getStore('musicChartAge').load();"
+                ],
+                "name": "show",
+                "scope": "me"
+            },
+            "name": "onChartShow",
+            "designerId": "920cebd5-a9ff-461e-818d-d6dab50a9e2c"
+        }
+    ]
+}

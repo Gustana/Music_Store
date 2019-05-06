@@ -1,0 +1,74 @@
+{
+    "type": "jsonstore",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "musicChartSale",
+        "storeId": "musicChartSale"
+    },
+    "name": "musicChartStore1",
+    "designerId": "0a059f2e-9cbb-4105-8f60-9227344b3a0d",
+    "cn": [
+        {
+            "type": "Ext.data.proxy.Ajax",
+            "reference": {
+                "name": "proxy",
+                "type": "object"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "api": [
+                    "{",
+                    "    read: 'api/music/chart/readChartSale.php'",
+                    "}"
+                ]
+            },
+            "name": "MyAjaxProxy2",
+            "designerId": "e3e6e20d-4bc0-4a2e-974d-f22918e56d30",
+            "cn": [
+                {
+                    "type": "Ext.data.reader.Json",
+                    "reference": {
+                        "name": "reader",
+                        "type": "object"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "root": "data"
+                    },
+                    "name": "MyJsonReader2",
+                    "designerId": "ec54fecd-5699-4410-b222-ce73b46a155a"
+                }
+            ]
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "jumlah"
+            },
+            "name": "MyField8",
+            "designerId": "059d2c46-bf38-42f2-9baf-c6a81274e2cf"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "label"
+            },
+            "name": "MyField9",
+            "designerId": "c38ae4b4-d478-475d-a36a-18d2114f636b"
+        }
+    ]
+}

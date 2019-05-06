@@ -1,0 +1,229 @@
+{
+    "type": "Ext.window.Window",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userAlias": "window_purchase",
+        "designer|userClassName": "window_purchase",
+        "height": 300,
+        "title": "Beli Musik",
+        "titleAlign": "center",
+        "width": 400
+    },
+    "name": "MyWindow",
+    "designerId": "7f3aeb05-e968-4f16-9ec5-7d07b6dcff40",
+    "cn": [
+        {
+            "type": "Ext.form.Panel",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "bodyPadding": 10,
+                "title": null
+            },
+            "name": "MyForm1",
+            "designerId": "bee8f148-97b5-49bf-9c7c-0af4a62d0d27",
+            "cn": [
+                {
+                    "type": "Ext.form.field.Hidden",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "fieldLabel": "",
+                        "name": "id_music"
+                    },
+                    "name": "MyHiddenField1",
+                    "designerId": "c2ada52b-836d-4f12-8d64-7f57d5730612"
+                },
+                {
+                    "type": "Ext.form.field.Display",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "fieldLabel": "Harga",
+                        "itemId": "music_price",
+                        "layout|anchor": "100%",
+                        "name": "music_price"
+                    },
+                    "name": "MyDisplayField",
+                    "designerId": "513f85c9-786e-46f4-8b39-267f79cc5d81"
+                },
+                {
+                    "type": "Ext.form.field.Text",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "allowBlank": false,
+                        "blankText": "Harus diisi",
+                        "fieldLabel": "Nama Pembeli",
+                        "itemId": "costumer_name",
+                        "layout|anchor": "100%",
+                        "name": "costumer_name"
+                    },
+                    "name": "MyTextField4",
+                    "designerId": "93800a79-0e9e-4464-b3fe-c3c0310ae33d"
+                },
+                {
+                    "type": "Ext.form.field.Text",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "allowBlank": false,
+                        "blankText": "Harus diisi",
+                        "fieldLabel": "Umur Pembeli",
+                        "itemId": "costumer_age",
+                        "layout|anchor": "100%",
+                        "name": "costumer_age"
+                    },
+                    "name": "MyTextField3",
+                    "designerId": "7270daf7-405c-451e-af35-6571b79da2b4"
+                },
+                {
+                    "type": "Ext.form.field.Number",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "allowBlank": false,
+                        "blankText": "Harus diisi",
+                        "fieldLabel": "Jumlah Beli",
+                        "itemId": "amountPurchase",
+                        "layout|anchor": "100%",
+                        "minText": null,
+                        "minValue": 1,
+                        "name": "total_purchase"
+                    },
+                    "name": "MyNumberField2",
+                    "designerId": "929c217a-04c6-4fc8-8de8-4f9ce9c4a9e2"
+                },
+                {
+                    "type": "Ext.form.field.Text",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "fieldLabel": "Total Harga",
+                        "hidden": true,
+                        "itemId": "totalPrice",
+                        "layout|anchor": "100%",
+                        "name": "totalPrice",
+                        "value": [
+                            "0"
+                        ]
+                    },
+                    "name": "MyTextField6",
+                    "designerId": "6a2c66df-f688-4fad-bcf0-f883aad9fa8c"
+                },
+                {
+                    "type": "Ext.form.field.Display",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "fieldLabel": "Total Harga",
+                        "itemId": "totalPriceShow",
+                        "layout|anchor": "100%",
+                        "name": "totalPrice",
+                        "value": "0"
+                    },
+                    "name": "MyDisplayField2",
+                    "designerId": "0c0d05b4-aa02-428b-86e8-b53b465702d4"
+                },
+                {
+                    "type": "Ext.form.field.Number",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "allowBlank": false,
+                        "blankText": "Harus diisi",
+                        "fieldLabel": "Total Bayar",
+                        "itemId": "totalPurchase",
+                        "layout|anchor": "100%"
+                    },
+                    "name": "MyNumberField3",
+                    "designerId": "b4840526-197a-4e94-b7f3-611685659a9c"
+                },
+                {
+                    "type": "Ext.form.field.Display",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "cls": "warning-text",
+                        "componentCls": null,
+                        "dock": null,
+                        "fieldLabel": "",
+                        "hidden": true,
+                        "itemId": "negative_balance",
+                        "labelAlign": "right",
+                        "layout|anchor": "",
+                        "value": "Uang kurang"
+                    },
+                    "name": "MyDisplayField1",
+                    "designerId": "3a0318e6-3fe8-4798-b94b-fb147352e825"
+                },
+                {
+                    "type": "Ext.button.Button",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "itemId": "btnPurchase",
+                        "margin": 30,
+                        "text": "Bayar",
+                        "width": 70
+                    },
+                    "name": "MyButton6",
+                    "designerId": "dbe42bc8-5848-43ab-869d-d989c5664267"
+                },
+                {
+                    "type": "Ext.button.Button",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "itemId": "btnCancelPurchase",
+                        "margin": null,
+                        "text": "Batal",
+                        "width": 70
+                    },
+                    "name": "MyButton7",
+                    "designerId": "ad3bbc5d-c225-4c3a-a880-a74fc6647b93"
+                }
+            ]
+        }
+    ]
+}

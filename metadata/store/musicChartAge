@@ -1,0 +1,87 @@
+{
+    "type": "jsonstore",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "musicChartAge",
+        "storeId": "musicChartAge"
+    },
+    "name": "MyJsonStore",
+    "designerId": "b5e817fc-7407-44a8-8786-da97c2825b87",
+    "cn": [
+        {
+            "type": "Ext.data.proxy.Ajax",
+            "reference": {
+                "name": "proxy",
+                "type": "object"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "api": [
+                    "{",
+                    "    read: 'api/music/chart/readChartAgeSale.php'",
+                    "}"
+                ]
+            },
+            "name": "MyAjaxProxy4",
+            "designerId": "35bdba74-0539-492b-b03e-c33be0990995",
+            "cn": [
+                {
+                    "type": "Ext.data.reader.Json",
+                    "reference": {
+                        "name": "reader",
+                        "type": "object"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "root": "data"
+                    },
+                    "name": "MyJsonReader4",
+                    "designerId": "38a04125-c6ab-4c96-aea5-3bb9f7069ff9"
+                }
+            ]
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "jumlah"
+            },
+            "name": "MyField18",
+            "designerId": "022a7ac5-5321-4a82-88d9-82a75f59440c"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "umur"
+            },
+            "name": "MyField19",
+            "designerId": "362322e6-7345-4030-b7fc-3353530bd4db"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "label"
+            },
+            "name": "MyField20",
+            "designerId": "9de75edd-a95d-4aee-b240-976a427e87a5"
+        }
+    ]
+}

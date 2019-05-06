@@ -1,0 +1,92 @@
+{
+    "type": "jsonstore",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "data": [
+            "[",
+            "    {",
+            "        \"kode\" : '1',",
+            "        \"music_genre\" : 'Pop'",
+            "    },",
+            "    {   ",
+            "        \"kode\" : '2',",
+            "        \"music_genre\" : 'Edm'",
+            "    },",
+            "    {   ",
+            "        \"kode\" : '3',",
+            "        \"music_genre\" : 'Rock'",
+            "    },",
+            "    {  ",
+            "        \"kode\" : '4',",
+            "        \"music_genre\" : 'Reggae'",
+            "    },",
+            "    {",
+            "        \"kode\" : '5',",
+            "        \"music_genre\" : 'Jazz'",
+            "    },",
+            "    {",
+            "        \"kode\" : '6',",
+            "        \"music_genre\" : 'Klasik'",
+            "    }",
+            "]"
+        ],
+        "designer|userClassName": "genreStore",
+        "storeId": "genreStore"
+    },
+    "name": "MyJsonStore",
+    "designerId": "1980669a-86f1-4540-bbf9-4e9cd8926fdc",
+    "cn": [
+        {
+            "type": "Ext.data.proxy.Ajax",
+            "reference": {
+                "name": "proxy",
+                "type": "object"
+            },
+            "codeClass": null,
+            "name": "MyAjaxProxy1",
+            "designerId": "4d96a336-39bd-449d-a2ee-28eec0e17b4a",
+            "cn": [
+                {
+                    "type": "Ext.data.reader.Json",
+                    "reference": {
+                        "name": "reader",
+                        "type": "object"
+                    },
+                    "codeClass": null,
+                    "name": "MyJsonReader1",
+                    "designerId": "f4c12638-78c9-47e3-889c-a2250ea344a2"
+                }
+            ]
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "kode"
+            },
+            "name": "MyField3",
+            "designerId": "c5acf376-13cb-4a18-b8e2-55f1fbbddfa5"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "music_genre"
+            },
+            "name": "MyField7",
+            "designerId": "a6727cd2-cd80-42a1-91c2-11abbb6a8a4b"
+        }
+    ]
+}

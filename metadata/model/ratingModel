@@ -1,0 +1,132 @@
+{
+    "type": "Ext.data.Model",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "ratingModel"
+    },
+    "name": "MyModel",
+    "designerId": "c65ba06c-a2b1-465c-8791-9f9748a5ad99",
+    "cn": [
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "id_rating"
+            },
+            "name": "MyField29",
+            "designerId": "c6526b43-4adc-4c84-a43f-522bd0b4c0b2"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "id_music"
+            },
+            "name": "MyField21",
+            "designerId": "e76603ea-1360-44b6-aa0c-baeb3887fb94"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "no"
+            },
+            "name": "MyField26",
+            "designerId": "3aab21dc-d588-4416-9a90-188e9f32c86e"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "music_title"
+            },
+            "name": "MyField27",
+            "designerId": "eb00c2fd-e769-4336-bebe-b74ba4ea56f7"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "music_genre"
+            },
+            "name": "MyField28",
+            "designerId": "0b84c50a-3fe2-4275-abf4-9a605def7d09"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "costumer_name"
+            },
+            "name": "MyField22",
+            "designerId": "7976674d-2676-4b90-b956-84a20324d0e4"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "costumer_age"
+            },
+            "name": "MyField23",
+            "designerId": "23033353-fd3c-4e14-b87c-7b47b5920cb0"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "costumer_comment"
+            },
+            "name": "MyField24",
+            "designerId": "01723fe8-dac3-49ae-9d63-f014ccf868ce"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "costumer_rating"
+            },
+            "name": "MyField25",
+            "designerId": "26bd3ba0-2d23-4df5-90fc-5dbffa67953d"
+        }
+    ]
+}

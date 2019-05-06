@@ -1,0 +1,1394 @@
+{
+    "type": "Ext.container.Viewport",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|initialView": true,
+        "designer|userAlias": "mainview",
+        "designer|userClassName": "MainView",
+        "itemId": "mainView",
+        "layout": "border"
+    },
+    "designerId": "353f0c49-9162-4dc5-8e2d-ffb09f0d3a62",
+    "cn": [
+        {
+            "type": "Ext.panel.Panel",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "itemId": "menuPanel",
+                "layout|region": "west",
+                "layout|split": true,
+                "title": "Menu",
+                "width": 150
+            },
+            "name": "MyPanel1",
+            "designerId": "70e4bdc2-8c21-4da3-b357-bdac73847e65",
+            "cn": [
+                {
+                    "type": "Ext.menu.Menu",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "floating": false,
+                        "itemId": "menu",
+                        "width": null
+                    },
+                    "name": "MyMenu",
+                    "designerId": "25abbee3-e977-4e92-bc3a-73fcf2aea764",
+                    "cn": [
+                        {
+                            "type": "Ext.menu.Item",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "href": null,
+                                "itemId": "home",
+                                "text": "Home"
+                            },
+                            "name": "MyMenuItem",
+                            "designerId": "2d21cd52-2bd4-4f26-99f8-ecb1b8453ece"
+                        },
+                        {
+                            "type": "Ext.menu.Item",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "href": null,
+                                "itemId": "store",
+                                "text": "Store"
+                            },
+                            "name": "MyMenuItem2",
+                            "designerId": "9f67ea74-e63c-4b04-b4c2-4130f7cbd1f8"
+                        },
+                        {
+                            "type": "Ext.menu.Item",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "itemId": "sale",
+                                "text": "Sale"
+                            },
+                            "name": "MyMenuItem3",
+                            "designerId": "38b65808-b841-45d5-93bf-84676f7c0e69"
+                        },
+                        {
+                            "type": "Ext.menu.Item",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "itemId": "rating",
+                                "text": "Rating"
+                            },
+                            "name": "MyMenuItem4",
+                            "designerId": "46a7e077-bcd2-4318-8410-cbb92202f7bd"
+                        },
+                        {
+                            "type": "Ext.menu.Item",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "href": null,
+                                "itemId": "chart",
+                                "text": "Chart"
+                            },
+                            "name": "MyMenuItem1",
+                            "designerId": "a9c5c2c5-e485-4719-a39d-1f3df3d72393"
+                        },
+                        {
+                            "type": "basiceventbinding",
+                            "reference": {
+                                "name": "listeners",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "fn": "onMenuClick",
+                                "implHandler": [
+                                    "location.hash = item.itemId;"
+                                ],
+                                "name": "click",
+                                "scope": "me"
+                            },
+                            "name": "onMenuClick",
+                            "designerId": "6aabf84c-692c-4a9f-9b11-0d46214a63b5"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "type": "Ext.panel.Panel",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "activeItem": 3,
+                "itemId": "contentPanel",
+                "layout": "card",
+                "layout|region": "center",
+                "title": null
+            },
+            "name": "MyPanel2",
+            "designerId": "c98c4f91-6f66-4054-8e31-2ccc2ab4f975",
+            "cn": [
+                {
+                    "type": "Ext.panel.Panel",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "container|align": "center",
+                        "container|pack": "center",
+                        "itemId": "chartPanel",
+                        "layout": "vbox",
+                        "title": "Chart"
+                    },
+                    "name": "MyPanel4",
+                    "designerId": "daf95a82-9e4f-4afd-b806-c2cc1b902fad",
+                    "cn": [
+                        {
+                            "type": "Ext.container.Container",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "container|align": "stretch",
+                                "layout": "vbox",
+                                "layout|flex": 1
+                            },
+                            "name": "MyContainer11",
+                            "designerId": "ee4e573d-6b98-429a-86b7-c5b24198d821",
+                            "cn": [
+                                {
+                                    "type": "Ext.container.Container",
+                                    "reference": {
+                                        "name": "items",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "layout": "hbox",
+                                        "layout|flex": 1
+                                    },
+                                    "name": "MyContainer9",
+                                    "designerId": "9603863f-b40d-40e2-a0bb-ce411ca71f80",
+                                    "cn": [
+                                        {
+                                            "type": "Ext.container.Container",
+                                            "reference": {
+                                                "name": "items",
+                                                "type": "array"
+                                            },
+                                            "codeClass": null,
+                                            "userConfig": {
+                                                "layout|flex": null
+                                            },
+                                            "name": "MyContainer3",
+                                            "designerId": "15a634dd-326b-4494-9917-c7a8c4f5cd24",
+                                            "cn": [
+                                                {
+                                                    "type": "Ext.form.field.Display",
+                                                    "reference": {
+                                                        "name": "items",
+                                                        "type": "array"
+                                                    },
+                                                    "codeClass": null,
+                                                    "userConfig": {
+                                                        "fieldLabel": "",
+                                                        "value": "Grafik Stok Musik"
+                                                    },
+                                                    "name": "MyDisplayField3",
+                                                    "designerId": "e0aef206-346d-459a-8fd7-5b821aea72f9"
+                                                },
+                                                {
+                                                    "type": "Ext.chart.Chart",
+                                                    "reference": {
+                                                        "name": "items",
+                                                        "type": "array"
+                                                    },
+                                                    "codeClass": null,
+                                                    "userConfig": {
+                                                        "animate": [
+                                                            "true"
+                                                        ],
+                                                        "height": 250,
+                                                        "insetPadding": 20,
+                                                        "store": "musicChartStore",
+                                                        "width": 400
+                                                    },
+                                                    "name": "PieChart",
+                                                    "designerId": "e5c0ee45-332c-4261-8604-380a17e09072",
+                                                    "isBuiltIn": true,
+                                                    "iconCls": "icon-pie-chart",
+                                                    "autoName": "PieChart",
+                                                    "cn": [
+                                                        {
+                                                            "type": "Ext.chart.series.Pie",
+                                                            "reference": {
+                                                                "name": "series",
+                                                                "type": "array"
+                                                            },
+                                                            "codeClass": null,
+                                                            "userConfig": {
+                                                                "angleField": "jumlah",
+                                                                "label": [
+                                                                    "{'field':'label','display':'rotate','contrast':true,'font':'12px Arial'}"
+                                                                ],
+                                                                "lengthField": null,
+                                                                "showInLegend": true,
+                                                                "title": null
+                                                            },
+                                                            "name": "MyPieSeries",
+                                                            "designerId": "1aca1bb7-9360-4357-9545-ac5ec1f7db64"
+                                                        }
+                                                    ]
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "type": "Ext.container.Container",
+                                            "reference": {
+                                                "name": "items",
+                                                "type": "array"
+                                            },
+                                            "codeClass": null,
+                                            "userConfig": {
+                                                "layout|flex": null
+                                            },
+                                            "name": "MyContainer4",
+                                            "designerId": "a8fbff62-c74c-4741-8b7e-68ddff2a7f6f",
+                                            "cn": [
+                                                {
+                                                    "type": "Ext.form.field.Display",
+                                                    "reference": {
+                                                        "name": "items",
+                                                        "type": "array"
+                                                    },
+                                                    "codeClass": null,
+                                                    "userConfig": {
+                                                        "fieldLabel": "",
+                                                        "value": "Grafik Penjualan Musik"
+                                                    },
+                                                    "name": "MyDisplayField4",
+                                                    "designerId": "d483daa0-88ef-4179-8806-194bf881d629"
+                                                },
+                                                {
+                                                    "type": "Ext.chart.Chart",
+                                                    "reference": {
+                                                        "name": "items",
+                                                        "type": "array"
+                                                    },
+                                                    "codeClass": null,
+                                                    "userConfig": {
+                                                        "animate": [
+                                                            "true"
+                                                        ],
+                                                        "height": 250,
+                                                        "insetPadding": 20,
+                                                        "store": "musicChartSale",
+                                                        "width": 400
+                                                    },
+                                                    "name": "BarChart",
+                                                    "designerId": "198a1a93-fdec-4c94-b789-028300d645dc",
+                                                    "isBuiltIn": true,
+                                                    "iconCls": "icon-bar-chart",
+                                                    "autoName": "BarChart",
+                                                    "cn": [
+                                                        {
+                                                            "type": "Ext.chart.axis.Category",
+                                                            "reference": {
+                                                                "name": "axes",
+                                                                "type": "array"
+                                                            },
+                                                            "codeClass": null,
+                                                            "userConfig": {
+                                                                "fields": [
+                                                                    "label"
+                                                                ],
+                                                                "position": "left",
+                                                                "title": "Genre"
+                                                            },
+                                                            "name": "MyCategoryAxis",
+                                                            "designerId": "e87df5ee-d2e1-45e9-9272-f25075736565"
+                                                        },
+                                                        {
+                                                            "type": "Ext.chart.axis.Numeric",
+                                                            "reference": {
+                                                                "name": "axes",
+                                                                "type": "array"
+                                                            },
+                                                            "codeClass": null,
+                                                            "userConfig": {
+                                                                "fields": [
+                                                                    "jumlah"
+                                                                ],
+                                                                "position": "bottom",
+                                                                "title": "Jumlah"
+                                                            },
+                                                            "name": "MyNumericAxis",
+                                                            "designerId": "b87ec7e2-f3d9-435a-b0c4-52d8add1df47"
+                                                        },
+                                                        {
+                                                            "type": "Ext.chart.series.Bar",
+                                                            "reference": {
+                                                                "name": "series",
+                                                                "type": "array"
+                                                            },
+                                                            "codeClass": null,
+                                                            "userConfig": {
+                                                                "axis": [
+                                                                    "bottom"
+                                                                ],
+                                                                "label": [
+                                                                    "{'display':'insideEnd','field':'jumlah','color':'#333','text-anchor':'middle'}"
+                                                                ],
+                                                                "xField": "label",
+                                                                "yField": [
+                                                                    "jumlah"
+                                                                ]
+                                                            },
+                                                            "name": "MyBarSeries",
+                                                            "designerId": "009365b0-c28f-4df9-83e9-c82ef0692a41"
+                                                        }
+                                                    ]
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                },
+                                {
+                                    "type": "Ext.container.Container",
+                                    "reference": {
+                                        "name": "items",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "layout|flex": 1
+                                    },
+                                    "name": "MyContainer10",
+                                    "designerId": "c58286de-5c3f-46c6-a955-c99411993094",
+                                    "cn": [
+                                        {
+                                            "type": "Ext.container.Container",
+                                            "reference": {
+                                                "name": "items",
+                                                "type": "array"
+                                            },
+                                            "codeClass": null,
+                                            "name": "MyContainer7",
+                                            "designerId": "c3a2e9d4-1193-4490-86e3-21d179facf0c",
+                                            "cn": [
+                                                {
+                                                    "type": "Ext.form.field.Display",
+                                                    "reference": {
+                                                        "name": "items",
+                                                        "type": "array"
+                                                    },
+                                                    "codeClass": null,
+                                                    "userConfig": {
+                                                        "fieldLabel": "Grafik Pembelian Musik Berdasarkan Umur",
+                                                        "labelWidth": 400,
+                                                        "value": null,
+                                                        "width": ""
+                                                    },
+                                                    "name": "MyDisplayField5",
+                                                    "designerId": "87a7267d-930c-4dd7-aac4-107ce846dc9b"
+                                                },
+                                                {
+                                                    "type": "Ext.chart.Chart",
+                                                    "reference": {
+                                                        "name": "items",
+                                                        "type": "array"
+                                                    },
+                                                    "codeClass": null,
+                                                    "userConfig": {
+                                                        "animate": [
+                                                            "true"
+                                                        ],
+                                                        "height": 250,
+                                                        "insetPadding": 20,
+                                                        "store": "musicChartAge",
+                                                        "width": 400
+                                                    },
+                                                    "name": "ColumnChart",
+                                                    "designerId": "0c7ee164-cf53-42b9-900d-47e36dcad616",
+                                                    "isBuiltIn": true,
+                                                    "iconCls": "icon-column-chart",
+                                                    "autoName": "ColumnChart",
+                                                    "cn": [
+                                                        {
+                                                            "type": "Ext.chart.axis.Category",
+                                                            "reference": {
+                                                                "name": "axes",
+                                                                "type": "array"
+                                                            },
+                                                            "codeClass": null,
+                                                            "userConfig": {
+                                                                "fields": [
+                                                                    "umur"
+                                                                ],
+                                                                "title": "Umur Pembeli"
+                                                            },
+                                                            "name": "MyCategoryAxis1",
+                                                            "designerId": "5ac131d8-7c7f-4161-a672-a654172bad1d"
+                                                        },
+                                                        {
+                                                            "type": "Ext.chart.axis.Numeric",
+                                                            "reference": {
+                                                                "name": "axes",
+                                                                "type": "array"
+                                                            },
+                                                            "codeClass": null,
+                                                            "userConfig": {
+                                                                "fields": [
+                                                                    "jumlah"
+                                                                ],
+                                                                "title": "Jumlah"
+                                                            },
+                                                            "name": "MyNumericAxis1",
+                                                            "designerId": "41a77d60-7b1a-4532-ae0f-de1393611f74"
+                                                        },
+                                                        {
+                                                            "type": "Ext.chart.series.Column",
+                                                            "reference": {
+                                                                "name": "series",
+                                                                "type": "array"
+                                                            },
+                                                            "codeClass": null,
+                                                            "userConfig": {
+                                                                "label": [
+                                                                    "{'display':'insideEnd','field':'label','color':'#333','text-anchor':'middle'}"
+                                                                ],
+                                                                "xField": "umur",
+                                                                "yField": [
+                                                                    "jumlah"
+                                                                ]
+                                                            },
+                                                            "name": "MyColumnSeries",
+                                                            "designerId": "fed7ce94-46fb-4e1c-9a67-cd51ed60b6a4"
+                                                        }
+                                                    ]
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "type": "Ext.container.Container",
+                                            "reference": {
+                                                "name": "items",
+                                                "type": "array"
+                                            },
+                                            "codeClass": null,
+                                            "name": "MyContainer12",
+                                            "designerId": "1f3979de-9052-46a5-be20-48ed73adaafb"
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "type": "Ext.panel.Panel",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "itemId": "salePanel",
+                        "title": "Sale"
+                    },
+                    "name": "MyPanel",
+                    "designerId": "047c6ce8-d6b9-4bef-82da-4c812f5d5f66",
+                    "cn": [
+                        {
+                            "type": "Ext.container.Container",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "margin": 10
+                            },
+                            "name": "MyContainer5",
+                            "designerId": "a2e1d322-88fc-499b-9ebd-a50995ffccc3",
+                            "cn": [
+                                {
+                                    "type": "Ext.form.field.Text",
+                                    "reference": {
+                                        "name": "items",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "fieldLabel": "Judul Musik",
+                                        "itemId": "edtSaleFilter",
+                                        "width": ""
+                                    },
+                                    "name": "MyTextField5",
+                                    "designerId": "49ecda6a-315f-424a-a17c-106249aa3a5a"
+                                }
+                            ]
+                        },
+                        {
+                            "type": "Ext.grid.Panel",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "itemId": "tableSale",
+                                "store": "saleStore",
+                                "title": "Data Penjualan"
+                            },
+                            "name": "MyGridPanel2",
+                            "designerId": "e8f91117-3743-4d8a-ba84-1bfc85347d14",
+                            "cn": [
+                                {
+                                    "type": "Ext.grid.column.Column",
+                                    "reference": {
+                                        "name": "columns",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "align": "center",
+                                        "dataIndex": "no",
+                                        "text": "No",
+                                        "width": "5%"
+                                    },
+                                    "name": "MyColumn12",
+                                    "designerId": "f3a07228-4bdd-4868-af74-b51776577209"
+                                },
+                                {
+                                    "type": "Ext.grid.column.Column",
+                                    "reference": {
+                                        "name": "columns",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "align": "center",
+                                        "dataIndex": "music_title",
+                                        "text": "Judul Musik",
+                                        "width": "30%"
+                                    },
+                                    "name": "MyColumn13",
+                                    "designerId": "9a8f0d99-ae1c-41d4-88a2-8eb86fec480b"
+                                },
+                                {
+                                    "type": "Ext.grid.column.Column",
+                                    "reference": {
+                                        "name": "columns",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "align": "center",
+                                        "dataIndex": "costumer_name",
+                                        "text": "Nama Pembeli",
+                                        "width": "30%"
+                                    },
+                                    "name": "MyColumn14",
+                                    "designerId": "75eeba0f-59b0-418f-8451-dcccb1d7ce10"
+                                },
+                                {
+                                    "type": "Ext.grid.column.Column",
+                                    "reference": {
+                                        "name": "columns",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "align": "center",
+                                        "dataIndex": "costumer_age",
+                                        "text": "Umur Pembeli",
+                                        "width": "10%"
+                                    },
+                                    "name": "MyColumn15",
+                                    "designerId": "e7af10f1-557b-420a-a7f9-9f766a99564a"
+                                },
+                                {
+                                    "type": "Ext.grid.column.Column",
+                                    "reference": {
+                                        "name": "columns",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "align": "center",
+                                        "dataIndex": "music_genre",
+                                        "text": "Genre",
+                                        "width": "5%"
+                                    },
+                                    "name": "MyColumn18",
+                                    "designerId": "7d99c027-deeb-4388-81b6-3f8156edba92"
+                                },
+                                {
+                                    "type": "Ext.grid.column.Column",
+                                    "reference": {
+                                        "name": "columns",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "align": "center",
+                                        "dataIndex": "total_purchase",
+                                        "text": "Jumlah Beli",
+                                        "width": "10%"
+                                    },
+                                    "name": "MyColumn16",
+                                    "designerId": "c1d15415-5ead-4b90-a4fc-6d6eff675d0e"
+                                },
+                                {
+                                    "type": "Ext.grid.column.Column",
+                                    "reference": {
+                                        "name": "columns",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "align": "center",
+                                        "dataIndex": "total_price",
+                                        "text": "Total",
+                                        "width": "10%"
+                                    },
+                                    "name": "MyColumn17",
+                                    "designerId": "96ec55b6-21bc-4cda-b4bf-31a7696532b1"
+                                },
+                                {
+                                    "type": "Ext.grid.View",
+                                    "reference": {
+                                        "name": "viewConfig",
+                                        "type": "object"
+                                    },
+                                    "codeClass": null,
+                                    "name": "MyGridView2",
+                                    "designerId": "4f92c9a8-ca55-4f83-bc73-0ce75ffeeda9"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "type": "Ext.panel.Panel",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "container|align": "center",
+                        "container|pack": "center",
+                        "itemId": "storePanel",
+                        "layout": "vbox",
+                        "title": "Store"
+                    },
+                    "name": "MyPanel5",
+                    "designerId": "bdce8a33-1e17-42fa-bdbd-f2e50d0d22da",
+                    "cn": [
+                        {
+                            "type": "Ext.container.Container",
+                            "reference": {
+                                "name": "dockedItems",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "cls": "action-container",
+                                "container|align": "middle",
+                                "container|pack": "center",
+                                "designer|displayName": "actionContainer",
+                                "dock": "top",
+                                "layout": "hbox",
+                                "layout|flex": 1,
+                                "padding": ""
+                            },
+                            "name": "MyContainer2",
+                            "designerId": "51329ef3-eca3-49e9-a72b-23769479b8b4",
+                            "cn": [
+                                {
+                                    "type": "Ext.button.Button",
+                                    "reference": {
+                                        "name": "items",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "disabled": true,
+                                        "itemId": "btnBuyMusic",
+                                        "margin": 10,
+                                        "maxWidth": 200,
+                                        "padding": 5,
+                                        "text": "Beli",
+                                        "width": 150
+                                    },
+                                    "name": "MyButton5",
+                                    "designerId": "f6665b15-04e5-46b1-8d16-767e11dbfff8"
+                                },
+                                {
+                                    "type": "Ext.button.Button",
+                                    "reference": {
+                                        "name": "items",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "disabled": true,
+                                        "itemId": "btnAddRating",
+                                        "margin": 10,
+                                        "maxWidth": 200,
+                                        "padding": 5,
+                                        "text": "Tambah Rating",
+                                        "width": 150
+                                    },
+                                    "name": "MyButton6",
+                                    "designerId": "485d9497-52a8-4650-8d44-74c03490e3e6"
+                                }
+                            ]
+                        },
+                        {
+                            "type": "Ext.container.Container",
+                            "reference": {
+                                "name": "dockedItems",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "dock": "top",
+                                "layout|flex": 1,
+                                "margin": 10
+                            },
+                            "name": "MyContainer6",
+                            "designerId": "0805d9da-b40c-403c-be1b-248643048f3b",
+                            "cn": [
+                                {
+                                    "type": "Ext.form.field.Text",
+                                    "reference": {
+                                        "name": "items",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "fieldLabel": "Nama Musik atau Penyanyi",
+                                        "itemId": "edtStoreFilter",
+                                        "labelWidth": 200,
+                                        "width": 400
+                                    },
+                                    "name": "MyTextField1",
+                                    "designerId": "b0dd7b89-1b48-4e80-af4e-146ede932fbe"
+                                }
+                            ]
+                        },
+                        {
+                            "type": "Ext.grid.Panel",
+                            "reference": {
+                                "name": "dockedItems",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "dock": "top",
+                                "itemId": "tableStore",
+                                "layout|flex": 1,
+                                "store": "musicStore",
+                                "title": "Data Musik"
+                            },
+                            "name": "MyGridPanel1",
+                            "designerId": "5c66d439-c62a-4b1c-bdad-c318884a2cb0",
+                            "cn": [
+                                {
+                                    "type": "Ext.grid.column.Column",
+                                    "reference": {
+                                        "name": "columns",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "align": "center",
+                                        "dataIndex": "no",
+                                        "designer|displayName": "No",
+                                        "text": "No",
+                                        "width": "5%"
+                                    },
+                                    "name": "MyColumn6",
+                                    "designerId": "0c3817f6-8f5b-410c-befa-46bd7d186f1f"
+                                },
+                                {
+                                    "type": "Ext.grid.column.Column",
+                                    "reference": {
+                                        "name": "columns",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "align": "center",
+                                        "dataIndex": "music_title",
+                                        "designer|displayName": "Judul Musik",
+                                        "text": "Judul Musik",
+                                        "width": "35%"
+                                    },
+                                    "name": "MyColumn7",
+                                    "designerId": "93183718-c67d-4c3d-913c-f6090ebfc4be"
+                                },
+                                {
+                                    "type": "Ext.grid.column.Column",
+                                    "reference": {
+                                        "name": "columns",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "align": "center",
+                                        "dataIndex": "music_singer",
+                                        "designer|displayName": "Penyanyi",
+                                        "text": "Penyanyi",
+                                        "width": "30%"
+                                    },
+                                    "name": "MyColumn8",
+                                    "designerId": "18d7e179-f9d6-4d55-8dfd-46a4e3fa8d55"
+                                },
+                                {
+                                    "type": "Ext.grid.column.Column",
+                                    "reference": {
+                                        "name": "columns",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "align": "center",
+                                        "dataIndex": "music_genre",
+                                        "designer|displayName": "Genre",
+                                        "text": "Genre",
+                                        "width": "10%"
+                                    },
+                                    "name": "MyColumn9",
+                                    "designerId": "351c5dd1-5bcd-4983-b4c1-6d0339e0ecfc"
+                                },
+                                {
+                                    "type": "Ext.grid.column.Column",
+                                    "reference": {
+                                        "name": "columns",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "align": "center",
+                                        "dataIndex": "music_stock",
+                                        "designer|displayName": "Stock",
+                                        "text": "Stock",
+                                        "width": "10%"
+                                    },
+                                    "name": "MyColumn10",
+                                    "designerId": "f9cd8f7c-cf15-457b-8997-a9f43f773a0c"
+                                },
+                                {
+                                    "type": "Ext.grid.column.Column",
+                                    "reference": {
+                                        "name": "columns",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "align": "center",
+                                        "dataIndex": "music_price",
+                                        "designer|displayName": "Harga",
+                                        "text": "Harga",
+                                        "width": "10%"
+                                    },
+                                    "name": "MyColumn11",
+                                    "designerId": "5a447f84-ba40-4536-9ac9-231862a29efe"
+                                },
+                                {
+                                    "type": "Ext.grid.View",
+                                    "reference": {
+                                        "name": "viewConfig",
+                                        "type": "object"
+                                    },
+                                    "codeClass": null,
+                                    "name": "MyGridView1",
+                                    "designerId": "2ea78535-774e-440d-a991-ecc36727f958"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "type": "Ext.panel.Panel",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "container|align": "center",
+                        "container|pack": "center",
+                        "itemId": "homePanel",
+                        "layout": "vbox",
+                        "title": "Home",
+                        "width": null
+                    },
+                    "name": "MyPanel3",
+                    "designerId": "6e0310e2-3829-40e2-acea-c3d80afea341",
+                    "cn": [
+                        {
+                            "type": "Ext.container.Container",
+                            "reference": {
+                                "name": "dockedItems",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "cls": "action-container",
+                                "container|align": "middle",
+                                "container|pack": "center",
+                                "designer|displayName": "actionContainer",
+                                "dock": "top",
+                                "height": 50,
+                                "layout": "hbox",
+                                "layout|flex": null
+                            },
+                            "name": "MyContainer1",
+                            "designerId": "8551bb8e-3446-4b00-967b-a6b3fe139063",
+                            "cn": [
+                                {
+                                    "type": "Ext.button.Button",
+                                    "reference": {
+                                        "name": "items",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "designer|displayName": "",
+                                        "itemId": "btnAddMusic",
+                                        "layout|flex": null,
+                                        "layout|margins": "0 10 0 0",
+                                        "maxWidth": 150,
+                                        "minWidth": null,
+                                        "padding": "5 10",
+                                        "text": "Tambah Musik",
+                                        "width": 150
+                                    },
+                                    "name": "MyButton",
+                                    "designerId": "e39d7183-44f7-4bf9-b33f-44cc43d53b1d"
+                                },
+                                {
+                                    "type": "Ext.button.Button",
+                                    "reference": {
+                                        "name": "items",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "designer|displayName": "",
+                                        "disabled": true,
+                                        "itemId": "btnEditMusic",
+                                        "layout|flex": null,
+                                        "layout|margins": "0 10",
+                                        "minWidth": 150,
+                                        "padding": "5 10",
+                                        "text": "Edit Musik"
+                                    },
+                                    "name": "MyButton2",
+                                    "designerId": "f5a2ee59-c597-4574-bbb3-8563a92bde6c"
+                                },
+                                {
+                                    "type": "Ext.button.Button",
+                                    "reference": {
+                                        "name": "items",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "designer|displayName": "",
+                                        "disabled": true,
+                                        "itemId": "btnDeleteMusic",
+                                        "layout|flex": null,
+                                        "minWidth": 150,
+                                        "padding": "5 10",
+                                        "text": "Hapus Musik"
+                                    },
+                                    "name": "MyButton1",
+                                    "designerId": "414f2b2a-162e-4f9d-b84a-3e42ce368c35"
+                                }
+                            ]
+                        },
+                        {
+                            "type": "Ext.container.Container",
+                            "reference": {
+                                "name": "dockedItems",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "designer|displayName": "fiiterContainer",
+                                "dock": "top",
+                                "layout|flex": 1,
+                                "margin": 10
+                            },
+                            "name": "MyContainer",
+                            "designerId": "52aa7b65-1ebc-4f2f-9aca-4c731d279a17",
+                            "cn": [
+                                {
+                                    "type": "Ext.form.field.Text",
+                                    "reference": {
+                                        "name": "items",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "fieldLabel": "Nama Musik atau Penyanyi",
+                                        "itemId": "edtMusicFilter",
+                                        "labelWidth": 200,
+                                        "name": "",
+                                        "width": 400
+                                    },
+                                    "name": "MyTextField",
+                                    "designerId": "db828e54-7879-43ee-b160-1d87d77f5e1d"
+                                }
+                            ]
+                        },
+                        {
+                            "type": "Ext.grid.Panel",
+                            "reference": {
+                                "name": "dockedItems",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "dock": "top",
+                                "itemId": "tableMusic",
+                                "layout|flex": 1,
+                                "store": "musicStore",
+                                "title": "Data Music",
+                                "titleAlign": "left"
+                            },
+                            "name": "MyGridPanel",
+                            "designerId": "cdf84b29-c914-4593-8cbd-44b07c6fe58c",
+                            "cn": [
+                                {
+                                    "type": "Ext.grid.column.Column",
+                                    "reference": {
+                                        "name": "columns",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "align": "center",
+                                        "dataIndex": "no",
+                                        "text": "No",
+                                        "width": "5%"
+                                    },
+                                    "name": "MyColumn",
+                                    "designerId": "01dc7793-72af-4587-953f-8961e41d3842"
+                                },
+                                {
+                                    "type": "Ext.grid.column.Column",
+                                    "reference": {
+                                        "name": "columns",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "align": "center",
+                                        "dataIndex": "music_title",
+                                        "text": "Judul Musik",
+                                        "width": "35%"
+                                    },
+                                    "name": "MyColumn1",
+                                    "designerId": "4bf7ab37-44e9-47a0-944d-b49668ed1a47"
+                                },
+                                {
+                                    "type": "Ext.grid.column.Column",
+                                    "reference": {
+                                        "name": "columns",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "align": "center",
+                                        "dataIndex": "music_singer",
+                                        "text": "Penyanyi",
+                                        "width": "30%"
+                                    },
+                                    "name": "MyColumn3",
+                                    "designerId": "b43d6597-2350-463e-b9bf-b9478ac474da"
+                                },
+                                {
+                                    "type": "Ext.grid.column.Column",
+                                    "reference": {
+                                        "name": "columns",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "align": "center",
+                                        "dataIndex": "music_genre",
+                                        "text": "Genre",
+                                        "width": "10%"
+                                    },
+                                    "name": "MyColumn4",
+                                    "designerId": "94eb6174-0820-4a43-803a-1a21a3c1ca37"
+                                },
+                                {
+                                    "type": "Ext.grid.column.Column",
+                                    "reference": {
+                                        "name": "columns",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "align": "center",
+                                        "dataIndex": "music_stock",
+                                        "text": "Stock",
+                                        "width": "10%"
+                                    },
+                                    "name": "MyColumn2",
+                                    "designerId": "8b2e9610-b29d-4f21-afc6-e124f1061908"
+                                },
+                                {
+                                    "type": "Ext.grid.column.Column",
+                                    "reference": {
+                                        "name": "columns",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "align": "center",
+                                        "dataIndex": "music_price",
+                                        "text": "Harga",
+                                        "width": "10%"
+                                    },
+                                    "name": "MyColumn5",
+                                    "designerId": "ab01ad55-b3a4-45c8-b45e-3da123ce294c"
+                                },
+                                {
+                                    "type": "Ext.grid.View",
+                                    "reference": {
+                                        "name": "viewConfig",
+                                        "type": "object"
+                                    },
+                                    "codeClass": null,
+                                    "name": "MyGridView",
+                                    "designerId": "6683f28b-e271-48b0-87ee-a8a79ea026da"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "type": "Ext.panel.Panel",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "itemId": "ratingPanel",
+                        "title": "Rating"
+                    },
+                    "name": "MyPanel6",
+                    "designerId": "5a386335-e722-447c-95cb-e36386f3ca21",
+                    "cn": [
+                        {
+                            "type": "Ext.container.Container",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "container|align": "middle",
+                                "container|pack": "center",
+                                "layout": "hbox"
+                            },
+                            "name": "MyContainer8",
+                            "designerId": "f510e121-33ed-457d-9ac2-e9b1726c06a3",
+                            "cn": [
+                                {
+                                    "type": "Ext.button.Button",
+                                    "reference": {
+                                        "name": "items",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "disabled": true,
+                                        "itemId": "btnEditRating",
+                                        "layout|flex": null,
+                                        "margin": 10,
+                                        "padding": 5,
+                                        "text": "Ubah Rating",
+                                        "width": 150
+                                    },
+                                    "name": "MyButton10",
+                                    "designerId": "7cc4ee11-7dde-4f24-804d-2594c639282b"
+                                },
+                                {
+                                    "type": "Ext.button.Button",
+                                    "reference": {
+                                        "name": "items",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "disabled": true,
+                                        "itemId": "btnDeleteRating",
+                                        "layout|flex": null,
+                                        "margin": 10,
+                                        "padding": 5,
+                                        "text": "Hapus Rating",
+                                        "width": 150
+                                    },
+                                    "name": "MyButton11",
+                                    "designerId": "3734ae7c-9f75-4110-bcac-04bd696cf27c"
+                                }
+                            ]
+                        },
+                        {
+                            "type": "Ext.grid.Panel",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "itemId": "tableRating",
+                                "store": "ratingStore",
+                                "title": null
+                            },
+                            "name": "MyGridPanel3",
+                            "designerId": "395fee3a-fda0-49f1-b752-1c2cf8df0ff9",
+                            "cn": [
+                                {
+                                    "type": "Ext.grid.column.Column",
+                                    "reference": {
+                                        "name": "columns",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "align": "center",
+                                        "dataIndex": "no",
+                                        "text": "No",
+                                        "width": "10%"
+                                    },
+                                    "name": "MyColumn19",
+                                    "designerId": "eebd9d4a-c145-4306-8d05-e9c6da99e18c"
+                                },
+                                {
+                                    "type": "Ext.grid.column.Column",
+                                    "reference": {
+                                        "name": "columns",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "align": "center",
+                                        "dataIndex": "music_title",
+                                        "text": "Judul Musik",
+                                        "width": "30%"
+                                    },
+                                    "name": "MyColumn20",
+                                    "designerId": "0216dc64-6eba-46d9-a65a-ccab764dd875"
+                                },
+                                {
+                                    "type": "Ext.grid.column.Column",
+                                    "reference": {
+                                        "name": "columns",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "align": "center",
+                                        "dataIndex": "costumer_name",
+                                        "text": "Nama Pelanggan",
+                                        "width": "30%"
+                                    },
+                                    "name": "MyColumn23",
+                                    "designerId": "93d90048-1ad0-454b-a133-6f99f917d621"
+                                },
+                                {
+                                    "type": "Ext.grid.column.Column",
+                                    "reference": {
+                                        "name": "columns",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "align": "center",
+                                        "dataIndex": "music_genre",
+                                        "text": "Genre",
+                                        "width": "15%"
+                                    },
+                                    "name": "MyColumn22",
+                                    "designerId": "1f217267-fd69-47a2-a0b4-aa46fa49c3fa"
+                                },
+                                {
+                                    "type": "Ext.grid.column.Column",
+                                    "reference": {
+                                        "name": "columns",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "align": "center",
+                                        "dataIndex": "costumer_rating",
+                                        "text": "Rating",
+                                        "width": "15%"
+                                    },
+                                    "name": "MyColumn25",
+                                    "designerId": "39895bce-6459-46e4-97e2-7fcbf8c9bb78"
+                                },
+                                {
+                                    "type": "Ext.grid.View",
+                                    "reference": {
+                                        "name": "viewConfig",
+                                        "type": "object"
+                                    },
+                                    "codeClass": null,
+                                    "name": "MyGridView3",
+                                    "designerId": "93304b66-496f-45d9-8739-5738d8bbec77"
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

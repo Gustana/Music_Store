@@ -1,0 +1,133 @@
+{
+    "type": "Ext.app.Controller",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "ratingController"
+    },
+    "name": "MyController",
+    "designerId": "f413163c-9969-401a-ae8b-6a01743d39b2",
+    "cn": [
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|controlQuery": "#ratingPanel",
+                "designer|targetType": "Ext.panel.Panel",
+                "fn": "onPanelShow",
+                "implHandler": [
+                    "Ext.getStore('ratingStore').load();"
+                ],
+                "name": "show",
+                "scope": "me"
+            },
+            "name": "onPanelShow",
+            "designerId": "b690ba39-461c-4d27-b093-445e6440bde8"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|controlQuery": "#ratingPanel",
+                "designer|targetType": "Ext.panel.Panel",
+                "fn": "onPanelBoxReady",
+                "implHandler": [
+                    "Ext.getStore('ratingStore').load();"
+                ],
+                "name": "boxready",
+                "scope": "me"
+            },
+            "name": "onPanelBoxReady",
+            "designerId": "f18fe803-310a-4cce-bf69-5eee05973840"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|controlQuery": "#tableRating",
+                "designer|targetType": "Ext.grid.Panel",
+                "fn": "onGridpanelSelectionChange",
+                "implHandler": [
+                    "Ext.ComponentQuery.query('#btnEditRating')[0].setDisabled(false);",
+                    "Ext.ComponentQuery.query('#btnDeleteRating')[0].setDisabled(false);"
+                ],
+                "name": "selectionchange",
+                "scope": "me"
+            },
+            "name": "onGridpanelSelectionChange",
+            "designerId": "661bfcda-7e95-4f83-a8e8-13121dc85dff"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|controlQuery": "#btnDeleteRating",
+                "designer|targetType": "Ext.button.Button",
+                "fn": "onDeleteRatingClick",
+                "implHandler": [
+                    "var hapus = function(btn){",
+                    "    if(btn == \"yes\"){",
+                    "        var grid = Ext.ComponentQuery.query('#tableRating')[0];",
+                    "        var selection = grid.getSelectionModel().getSelection()[0];",
+                    "",
+                    "        var idRating  = selection.get('id_rating');",
+                    "",
+                    "        if(selection){",
+                    "            Ext.Ajax.request({",
+                    "                url : 'api/music/rating/deleteRating.php',",
+                    "                params :{",
+                    "                    id_rating : idRating",
+                    "                },",
+                    "                success:function(response, opts){",
+                    "                    var response = Ext.decode(response.responseText);",
+                    "                    if(response.success){",
+                    "                        Ext.getStore('ratingStore').load();",
+                    "                    }else{",
+                    "                        Ext.MessageBox.show({",
+                    "                            title : \"Peringatan\",",
+                    "                            msg: response.message,",
+                    "                            buttons: Ext.MessageBox.OK,",
+                    "                            icon : Ext.MessageBox.INFO",
+                    "                        });",
+                    "                    }",
+                    "                }",
+                    "            });",
+                    "        }",
+                    "    }",
+                    "};",
+                    "",
+                    "Ext.MessageBox.show({",
+                    "    title: \"Peringatan\",",
+                    "    msg: \"Apakah anda yakin ingin menghapus rating ini ?\",",
+                    "    buttons: Ext.MessageBox.YESNO,",
+                    "    icon: Ext.MessageBox.QUESTION,",
+                    "    fn: hapus",
+                    "});"
+                ],
+                "name": "click",
+                "scope": "me"
+            },
+            "name": "onDeleteRatingClick",
+            "designerId": "4da6dd61-4f9d-48c8-89d6-a45373a1a4b5"
+        }
+    ]
+}
